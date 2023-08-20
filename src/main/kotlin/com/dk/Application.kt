@@ -24,4 +24,5 @@ fun Application.module() {
     configureMonitoring()
     configureSerialization()
     configureDefaultHeaders()
+    configureStatusPages()
 }
