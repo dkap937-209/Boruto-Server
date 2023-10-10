@@ -42,6 +42,7 @@ dependencies {
 
     implementation("io.insert-koin:koin-ktor:$koinVersion")
     implementation("io.insert-koin:koin-logger-slf4j:$koinVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
 
 }
 
