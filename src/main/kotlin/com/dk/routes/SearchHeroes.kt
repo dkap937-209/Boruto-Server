@@ -17,7 +17,9 @@ fun Route.searchHeroes(){
 
         val apiResponse = heroRepository.searchHeroes(name = name)
         val applicationId = call.request.headers["X-Application-ID"]
-        println("endpoint = ${call.request.path()} || applicationId = $applicationId || responsePayload = $apiResponse")
+        val localAddress = call.request.local.localAddress
+        val remoteAddress = call.request.local.remoteAddress
+        println("endpoint = ${call.request.path()} || applicationId = $applicationId || localAddress = $localAddress || remoteAddress = $remoteAddress|| responsePayload = $apiResponse")
         call.respond(
             message = apiResponse,
             status = HttpStatusCode.OK
